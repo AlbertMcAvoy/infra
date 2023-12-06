@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "9e8dc042-abc6-4060-859b-d62e3b98af6b",
+		"name": "interator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24313343"
+	},
+	"item": [
+		{
+			"name": "01- HEALTH",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "02- GET",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "05- FAIL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/something"
+			},
+			"response": []
+		},
+		{
+			"name": "03 - ADD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000"
+			},
+			"response": []
+		}
+	]
+}
