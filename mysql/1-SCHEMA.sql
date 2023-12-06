@@ -9,6 +9,9 @@ create table interator (
 );
 
 insert into interator (state) values (0);
+insert into interator (state) values (1);
+insert into interator (state) values (2);
+insert into interator (state) values (3);
 
 #-----------------------------------#
 #       USER RIGHTS MANAGEMENT      #
