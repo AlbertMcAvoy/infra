@@ -1,7 +1,9 @@
 version: '3'
 services:
   web:
-    build: .
+    build:
+      context: ./python
+      dockerfile: ./DOCKERFILE-PYTHON
     command: gunicorn -b 0.0.0.0:8000 todosapp.wsgi:application
     depends_on:
       - mariadb
