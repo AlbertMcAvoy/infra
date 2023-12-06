@@ -4,13 +4,13 @@
 	"values": [
 		{
 			"key": "hostname",
-			"value": "web",
+			"value": "nginx",
 			"type": "text",
 			"enabled": true
 		},
 		{
 			"key": "hostport",
-			"value": "8000",
+			"value": "80",
 			"type": "text",
 			"enabled": true
 		}
