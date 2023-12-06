@@ -4,13 +4,13 @@
 	"values": [
 		{
 			"key": "hostname",
-			"value": "http://172.19.0.4",
+			"value": "web",
 			"type": "text",
 			"enabled": true
 		},
 		{
 			"key": "hostport",
-			"value": "80",
+			"value": "8000",
 			"type": "text",
 			"enabled": true
 		}
