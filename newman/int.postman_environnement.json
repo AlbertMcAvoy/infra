@@ -4,7 +4,7 @@
 	"values": [
 		{
 			"key": "hostname",
-			"value": "http://172.19.0.4",
+			"value": "nginx",
 			"type": "text",
 			"enabled": true
 		},
