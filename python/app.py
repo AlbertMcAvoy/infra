@@ -17,19 +17,17 @@ class MyHandler(BaseHTTPRequestHandler):
        else:
            self.send_error(404)
 
-
-    def headers():
+    def handle_health(self):
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
         self.end_headers()
-
-    def handle_health(self):
-        self.headers()
         health_check = {"status": "OK"}
         self.wfile.write(json.dumps(health_check).encode('utf8'))
 
     def handle_get(self):
-        self.headers()
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.end_headers()
         cnx = mysql.connector.connect(user='userIterator', password='qwerty1234', host='mariadb', database='iterator-db')
         cursor = cnx.cursor()
         query = ("SELECT * FROM interator")
@@ -44,7 +42,9 @@ class MyHandler(BaseHTTPRequestHandler):
         cnx.close()
 
     def handle_add(self):
-        self.headers()
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.end_headers()
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length)
         data = json.loads(post_data)

@@ -5,7 +5,7 @@
     },
     "item": [
       {
-        "id": "505e7bb8-b1a3-463c-8c76-1823e38d9268",
+        "id": "23a31a7e-73e4-4f36-8085-ac110b5537af",
         "name": "01 - Health",
         "request": {
           "url": {
@@ -32,18 +32,18 @@
           {
             "listen": "test",
             "script": {
-              "id": "4a3e5b48-0d23-44cc-84fd-8e94864f86a5",
+              "id": "50a2563a-1938-4648-9e42-ef59c12b7db2",
               "type": "text/javascript",
               "exec": [
                 "tests[\"Status code is 200\"] = responseCode.code === 200;"
               ],
-              "_lastExecutionId": "f2a20c81-d05a-475c-a5e3-8834d110b89a"
+              "_lastExecutionId": "998f065a-822b-46d2-996d-1ccb863df2bb"
             }
           }
         ]
       },
       {
-        "id": "d193c36f-68bf-49f1-a427-fc5ea1d2a407",
+        "id": "f2686cbc-9fcf-447e-b9ef-a3054189d390",
         "name": "02 - Get",
         "request": {
           "url": {
@@ -70,18 +70,18 @@
           {
             "listen": "test",
             "script": {
-              "id": "8bb6aaca-dc26-4e86-9958-ae8b584dca3f",
+              "id": "9cf25798-c3b3-4350-a057-0ccf3dc60a01",
               "type": "text/javascript",
               "exec": [
                 "tests[\"Status code is 200\"] = responseCode.code === 200;"
               ],
-              "_lastExecutionId": "96d3efaf-1d14-4538-afb6-3a2a92883bbc"
+              "_lastExecutionId": "9827163f-2f51-4308-a630-8b7834ab7e7b"
             }
           }
         ]
       },
       {
-        "id": "f494f79a-3f70-4f8c-9ae6-14ccdb884786",
+        "id": "c7b62fb9-10b5-4414-a165-9cf2010e83c2",
         "name": "03 - Add",
         "request": {
           "url": {
@@ -112,18 +112,18 @@
           {
             "listen": "test",
             "script": {
-              "id": "d887a2cf-5ab5-4fec-94f6-34d1b2bc99aa",
+              "id": "2edd12b7-688b-42ef-9b75-eee1d6367f71",
               "type": "text/javascript",
               "exec": [
                 "tests[\"Status code is 200\"] = responseCode.code === 200;"
               ],
-              "_lastExecutionId": "3edb359f-18d9-45df-bfde-fa306d3455cb"
+              "_lastExecutionId": "0e622a3e-3b43-4aab-be47-f58cc021b8e0"
             }
           }
         ]
       },
       {
-        "id": "17bf1b88-9397-489e-bfa7-8ca8d7e42712",
+        "id": "621078af-1f12-436d-a051-60ea558fac51",
         "name": "04 - Get",
         "request": {
           "url": {
@@ -150,18 +150,18 @@
           {
             "listen": "test",
             "script": {
-              "id": "71f10765-d6f7-4915-8428-f4bf4fc4ada4",
+              "id": "a4aa2191-aeb3-468f-8366-8d819b3333ee",
               "type": "text/javascript",
               "exec": [
                 "tests[\"Status code is 200\"] = responseCode.code === 200;"
               ],
-              "_lastExecutionId": "915138d4-69ca-4e51-9acb-44e2eb25a3ab"
+              "_lastExecutionId": "f6be99dc-c918-4894-b855-e5bb337bf6ed"
             }
           }
         ]
       },
       {
-        "id": "a4731fb3-6739-4d86-891d-f990d38340d4",
+        "id": "b50b7d79-ad2e-4e41-90c2-1a914a025417",
         "name": "05 - Fail",
         "request": {
           "url": {
@@ -182,12 +182,12 @@
           {
             "listen": "test",
             "script": {
-              "id": "bdcf5c0a-02f5-4492-9116-a6695ea460fc",
+              "id": "861c762f-61ce-483d-806e-ff6d84f47891",
               "type": "text/javascript",
               "exec": [
                 "tests[\"Status code is 404\"] = responseCode.code === 404;"
               ],
-              "_lastExecutionId": "3d30c013-7ab0-4d01-8a7e-3f8be29fcd74"
+              "_lastExecutionId": "724ec2a3-9bfb-4f7b-b1ad-00fdfc987235"
             }
           }
         ]
@@ -212,18 +212,18 @@
     "values": [
       {
         "type": "any",
-        "value": "web",
+        "value": "nginx",
         "key": "hostname"
       },
       {
         "type": "any",
-        "value": "8000",
+        "value": "80",
         "key": "hostport"
       }
     ]
   },
   "globals": {
-    "id": "f702740b-55d5-4491-b7c5-42c09c849f3d",
+    "id": "7ee1f534-5e91-4b4a-a440-a0ec5ee7ec68",
     "values": []
   },
   "run": {
@@ -261,7 +261,7 @@
       "assertions": {
         "total": 5,
         "pending": 0,
-        "failed": 2
+        "failed": 0
       },
       "testScripts": {
         "total": 5,
@@ -275,10 +275,10 @@
       }
     },
     "timings": {
-      "responseAverage": 16.8,
+      "responseAverage": 48.6,
       "responseMin": 6,
-      "responseMax": 53,
-      "responseSd": 18.137254478007414,
+      "responseMax": 68,
+      "responseSd": 22.5884926455928,
       "dnsAverage": 0,
       "dnsMin": 0,
       "dnsMax": 0,
@@ -287,8 +287,8 @@
       "firstByteMin": 0,
       "firstByteMax": 0,
       "firstByteSd": 0,
-      "started": 1701863238231,
-      "completed": 1701863238467
+      "started": 1707732774661,
+      "completed": 1707732775046
     },
     "executions": [
       {
@@ -301,11 +301,11 @@
           "eof": false,
           "bof": true,
           "cr": false,
-          "ref": "22f45896-d34b-4441-96ab-1f6754963f34",
-          "httpRequestId": "309f427e-7968-4015-948b-4f9c299e7f87"
+          "ref": "25d69cbc-c208-48e0-b479-f805ab4489b3",
+          "httpRequestId": "beccc680-44c6-4666-a997-ddce0c6371ee"
         },
         "item": {
-          "id": "505e7bb8-b1a3-463c-8c76-1823e38d9268",
+          "id": "23a31a7e-73e4-4f36-8085-ac110b5537af",
           "name": "01 - Health",
           "request": {
             "url": {
@@ -332,12 +332,12 @@
             {
               "listen": "test",
               "script": {
-                "id": "4a3e5b48-0d23-44cc-84fd-8e94864f86a5",
+                "id": "50a2563a-1938-4648-9e42-ef59c12b7db2",
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ],
-                "_lastExecutionId": "f2a20c81-d05a-475c-a5e3-8834d110b89a"
+                "_lastExecutionId": "998f065a-822b-46d2-996d-1ccb863df2bb"
               }
             }
           ]
@@ -345,12 +345,12 @@
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8000",
+            "port": "80",
             "path": [
               "health"
             ],
             "host": [
-              "web"
+              "nginx"
             ],
             "query": [],
             "variable": []
@@ -362,7 +362,7 @@
             },
             {
               "key": "User-Agent",
-              "value": "PostmanRuntime/7.33.0",
+              "value": "PostmanRuntime/7.36.3",
               "system": true
             },
             {
@@ -377,12 +377,12 @@
             },
             {
               "key": "Postman-Token",
-              "value": "ed803c62-1e36-41e3-bd56-8852d98c5cc2",
+              "value": "6576801a-5123-4009-aa9d-a4b453c49e50",
               "system": true
             },
             {
               "key": "Host",
-              "value": "web:8000",
+              "value": "nginx:80",
               "system": true
             },
             {
@@ -399,46 +399,57 @@
           "method": "GET"
         },
         "response": {
-          "id": "7f16fcf4-30ef-4f74-a6fb-6350f85f3ccd",
+          "id": "f2100544-bdc1-4238-9bdb-cebde6e16670",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Server",
-              "value": "BaseHTTP/0.6 Python/3.6.1"
+              "value": "nginx/1.25.3"
             },
             {
               "key": "Date",
-              "value": "Wed, 06 Dec 2023 11:47:18 GMT"
+              "value": "Mon, 12 Feb 2024 10:12:54 GMT"
             },
             {
-              "key": "Content-type",
-              "value": "text/plain"
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
             }
           ],
           "stream": {
             "type": "Buffer",
             "data": [
-              72,
-              101,
-              108,
-              108,
-              111,
-              44,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
               32,
-              87,
-              111,
-              114,
-              108,
-              100,
-              33
+              34,
+              79,
+              75,
+              34,
+              125
             ]
           },
           "cookie": [],
-          "responseTime": 53,
-          "responseSize": 13
+          "responseTime": 66,
+          "responseSize": 16
         },
-        "id": "505e7bb8-b1a3-463c-8c76-1823e38d9268",
+        "id": "23a31a7e-73e4-4f36-8085-ac110b5537af",
         "assertions": [
           {
             "assertion": "Status code is 200",
@@ -448,15 +459,15 @@
       },
       {
         "cursor": {
-          "ref": "c3bf5b82-a962-4fed-a223-2fe5fb7d1355",
+          "ref": "fe19bc03-22db-4048-b965-a1961cc7623b",
           "length": 5,
           "cycles": 1,
           "position": 1,
           "iteration": 0,
-          "httpRequestId": "1106a765-9bbb-4e3c-a8a6-9595b1a5f04e"
+          "httpRequestId": "1c191cef-d425-4ccd-af6f-69e36ef01416"
         },
         "item": {
-          "id": "d193c36f-68bf-49f1-a427-fc5ea1d2a407",
+          "id": "f2686cbc-9fcf-447e-b9ef-a3054189d390",
           "name": "02 - Get",
           "request": {
             "url": {
@@ -483,12 +494,12 @@
             {
               "listen": "test",
               "script": {
-                "id": "8bb6aaca-dc26-4e86-9958-ae8b584dca3f",
+                "id": "9cf25798-c3b3-4350-a057-0ccf3dc60a01",
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ],
-                "_lastExecutionId": "96d3efaf-1d14-4538-afb6-3a2a92883bbc"
+                "_lastExecutionId": "9827163f-2f51-4308-a630-8b7834ab7e7b"
               }
             }
           ]
@@ -496,12 +507,12 @@
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8000",
+            "port": "80",
             "path": [
               "get"
             ],
             "host": [
-              "web"
+              "nginx"
             ],
             "query": [],
             "variable": []
@@ -513,7 +524,7 @@
             },
             {
               "key": "User-Agent",
-              "value": "PostmanRuntime/7.33.0",
+              "value": "PostmanRuntime/7.36.3",
               "system": true
             },
             {
@@ -528,12 +539,12 @@
             },
             {
               "key": "Postman-Token",
-              "value": "6d23c2bf-ebff-4d50-aab9-a53461a5c711",
+              "value": "0325df92-aa62-4365-a827-193082967d41",
               "system": true
             },
             {
               "key": "Host",
-              "value": "web:8000",
+              "value": "nginx:80",
               "system": true
             },
             {
@@ -550,46 +561,136 @@
           "method": "GET"
         },
         "response": {
-          "id": "b2338594-a304-4ed6-bb77-e669f3da664e",
+          "id": "ccc4377e-bfac-4bb5-8dff-15ed6c88ff75",
           "status": "OK",
           "code": 200,
           "header": [
             {
               "key": "Server",
-              "value": "BaseHTTP/0.6 Python/3.6.1"
+              "value": "nginx/1.25.3"
             },
             {
               "key": "Date",
-              "value": "Wed, 06 Dec 2023 11:47:18 GMT"
+              "value": "Mon, 12 Feb 2024 10:12:54 GMT"
             },
             {
-              "key": "Content-type",
-              "value": "text/plain"
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
             }
           ],
           "stream": {
             "type": "Buffer",
             "data": [
-              72,
-              101,
-              108,
-              108,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              32,
+              34,
               111,
+              107,
+              34,
               44,
               32,
-              87,
+              34,
+              105,
+              116,
+              101,
+              114,
+              97,
+              116,
               111,
               114,
-              108,
-              100,
-              33
+              115,
+              34,
+              58,
+              32,
+              91,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              101,
+              34,
+              58,
+              32,
+              91,
+              48,
+              93,
+              125,
+              44,
+              32,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              101,
+              34,
+              58,
+              32,
+              91,
+              49,
+              93,
+              125,
+              44,
+              32,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              101,
+              34,
+              58,
+              32,
+              91,
+              50,
+              93,
+              125,
+              44,
+              32,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              101,
+              34,
+              58,
+              32,
+              91,
+              51,
+              93,
+              125,
+              93,
+              125
             ]
           },
           "cookie": [],
-          "responseTime": 9,
-          "responseSize": 13
+          "responseTime": 68,
+          "responseSize": 95
         },
-        "id": "d193c36f-68bf-49f1-a427-fc5ea1d2a407",
+        "id": "f2686cbc-9fcf-447e-b9ef-a3054189d390",
         "assertions": [
           {
             "assertion": "Status code is 200",
@@ -599,15 +700,15 @@
       },
       {
         "cursor": {
-          "ref": "14f17df1-4156-47bb-9013-57ac66dc6d67",
+          "ref": "7629a8cf-2afa-4279-aeb4-2cfcec707c7b",
           "length": 5,
           "cycles": 1,
           "position": 2,
           "iteration": 0,
-          "httpRequestId": "d7fc7140-8d81-4c2c-ad19-07e332d75238"
+          "httpRequestId": "63091f54-98b3-432d-a2e6-f16e5aada6ae"
         },
         "item": {
-          "id": "f494f79a-3f70-4f8c-9ae6-14ccdb884786",
+          "id": "c7b62fb9-10b5-4414-a165-9cf2010e83c2",
           "name": "03 - Add",
           "request": {
             "url": {
@@ -638,12 +739,12 @@
             {
               "listen": "test",
               "script": {
-                "id": "d887a2cf-5ab5-4fec-94f6-34d1b2bc99aa",
+                "id": "2edd12b7-688b-42ef-9b75-eee1d6367f71",
                 "type": "text/javascript",
                 "exec": [
                   "tests[\"Status code is 200\"] = responseCode.code === 200;"
                 ],
-                "_lastExecutionId": "3edb359f-18d9-45df-bfde-fa306d3455cb"
+                "_lastExecutionId": "0e622a3e-3b43-4aab-be47-f58cc021b8e0"
               }
             }
           ]
@@ -651,12 +752,12 @@
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8000",
+            "port": "80",
             "path": [
               "add"
             ],
             "host": [
-              "web"
+              "nginx"
             ],
             "query": [],
             "variable": []
@@ -668,7 +769,7 @@
             },
             {
               "key": "User-Agent",
-              "value": "PostmanRuntime/7.33.0",
+              "value": "PostmanRuntime/7.36.3",
               "system": true
             },
             {
@@ -683,12 +784,12 @@
             },
             {
               "key": "Postman-Token",
-              "value": "05fc63e9-2028-459e-8036-2eeff2ed5c98",
+              "value": "c5a2a630-6f27-4a47-8086-3d1c5d9d6d15",
               "system": true
             },
             {
               "key": "Host",
-              "value": "web:8000",
+              "value": "nginx:80",
               "system": true
             },
             {
@@ -714,21 +815,474 @@
           }
         },
         "response": {
-          "id": "05357d5e-4eda-4196-a601-8713a7c55757",
-          "status": "Unsupported method ('POST')",
-          "code": 501,
+          "id": "d977bf39-1dec-45bd-bfbd-2a8ac2b178c5",
+          "status": "OK",
+          "code": 200,
           "header": [
             {
               "key": "Server",
-              "value": "BaseHTTP/0.6 Python/3.6.1"
+              "value": "nginx/1.25.3"
             },
             {
               "key": "Date",
-              "value": "Wed, 06 Dec 2023 11:47:18 GMT"
+              "value": "Mon, 12 Feb 2024 10:12:54 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
             },
             {
               "key": "Connection",
-              "value": "close"
+              "value": "keep-alive"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              32,
+              34,
+              111,
+              107,
+              34,
+              44,
+              32,
+              34,
+              109,
+              101,
+              115,
+              115,
+              97,
+              103,
+              101,
+              34,
+              58,
+              32,
+              34,
+              73,
+              116,
+              101,
+              114,
+              97,
+              116,
+              111,
+              114,
+              32,
+              118,
+              97,
+              108,
+              117,
+              101,
+              32,
+              97,
+              100,
+              100,
+              101,
+              100,
+              32,
+              115,
+              117,
+              99,
+              99,
+              101,
+              115,
+              115,
+              102,
+              117,
+              108,
+              108,
+              121,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 56,
+          "responseSize": 64
+        },
+        "id": "c7b62fb9-10b5-4414-a165-9cf2010e83c2",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "9c738724-f04d-4b1c-854c-af8a5526939f",
+          "length": 5,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "cf3d3bea-b828-4302-8f62-e70825922579"
+        },
+        "item": {
+          "id": "621078af-1f12-436d-a051-60ea558fac51",
+          "name": "04 - Get",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "get"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "a4aa2191-aeb3-468f-8366-8d819b3333ee",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "f6be99dc-c918-4894-b855-e5bb337bf6ed"
+              }
+            }
+          ]
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "80",
+            "path": [
+              "get"
+            ],
+            "host": [
+              "nginx"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.36.3",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "6edf5535-69a9-4f6e-a100-b99782c3bf65",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "nginx:80",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "f5dfe1ec-f851-4291-ab57-34085e387db8",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.3"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 12 Feb 2024 10:12:54 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              32,
+              34,
+              111,
+              107,
+              34,
+              44,
+              32,
+              34,
+              105,
+              116,
+              101,
+              114,
+              97,
+              116,
+              111,
+              114,
+              115,
+              34,
+              58,
+              32,
+              91,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              101,
+              34,
+              58,
+              32,
+              91,
+              48,
+              93,
+              125,
+              44,
+              32,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              101,
+              34,
+              58,
+              32,
+              91,
+              49,
+              93,
+              125,
+              44,
+              32,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              101,
+              34,
+              58,
+              32,
+              91,
+              50,
+              93,
+              125,
+              44,
+              32,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              101,
+              34,
+              58,
+              32,
+              91,
+              51,
+              93,
+              125,
+              44,
+              32,
+              123,
+              34,
+              115,
+              116,
+              97,
+              116,
+              101,
+              34,
+              58,
+              32,
+              91,
+              49,
+              93,
+              125,
+              93,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 47,
+          "responseSize": 111
+        },
+        "id": "621078af-1f12-436d-a051-60ea558fac51",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "02ec641e-7daa-4997-ab00-e1da780c412a",
+          "length": 5,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "2ded914f-7bf8-4569-8586-5e9a84e17365"
+        },
+        "item": {
+          "id": "b50b7d79-ad2e-4e41-90c2-1a914a025417",
+          "name": "05 - Fail",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "something"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "861c762f-61ce-483d-806e-ff6d84f47891",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                ],
+                "_lastExecutionId": "724ec2a3-9bfb-4f7b-b1ad-00fdfc987235"
+              }
+            }
+          ]
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "80",
+            "path": [
+              "something"
+            ],
+            "host": [
+              "nginx"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.36.3",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "39714e5f-5105-4afa-8bf3-71128540e390",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "nginx:80",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "b36e336d-130f-4951-b078-2363d6999edb",
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.3"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 12 Feb 2024 10:12:55 GMT"
             },
             {
               "key": "Content-Type",
@@ -736,7 +1290,11 @@
             },
             {
               "key": "Content-Length",
-              "value": "497"
+              "value": "447"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
             }
           ],
           "stream": {
@@ -1050,9 +1608,9 @@
               101,
               58,
               32,
-              53,
+              52,
               48,
-              49,
+              52,
               60,
               47,
               112,
@@ -1078,33 +1636,15 @@
               101,
               58,
               32,
-              85,
-              110,
-              115,
+              78,
+              111,
+              116,
+              32,
+              70,
+              111,
               117,
-              112,
-              112,
-              111,
-              114,
-              116,
-              101,
+              110,
               100,
-              32,
-              109,
-              101,
-              116,
-              104,
-              111,
-              100,
-              32,
-              40,
-              39,
-              80,
-              79,
-              83,
-              84,
-              39,
-              41,
               46,
               60,
               47,
@@ -1146,73 +1686,41 @@
               110,
               58,
               32,
-              72,
-              84,
-              84,
-              80,
-              83,
-              116,
-              97,
-              116,
-              117,
-              115,
-              46,
-              78,
-              79,
-              84,
-              95,
-              73,
-              77,
-              80,
-              76,
-              69,
-              77,
-              69,
-              78,
-              84,
-              69,
-              68,
+              52,
+              48,
+              52,
               32,
               45,
               32,
-              83,
-              101,
-              114,
-              118,
-              101,
-              114,
-              32,
-              100,
+              78,
               111,
-              101,
-              115,
-              32,
-              110,
-              111,
-              116,
-              32,
-              115,
-              117,
-              112,
-              112,
-              111,
-              114,
-              116,
-              32,
               116,
               104,
               105,
-              115,
+              110,
+              103,
               32,
-              111,
-              112,
-              101,
-              114,
+              109,
               97,
               116,
+              99,
+              104,
+              101,
+              115,
+              32,
+              116,
+              104,
+              101,
+              32,
+              103,
               105,
-              111,
+              118,
+              101,
               110,
+              32,
+              85,
+              82,
+              73,
               46,
               60,
               47,
@@ -1242,875 +1750,22 @@
             ]
           },
           "cookie": [],
-          "responseTime": 9,
-          "responseSize": 497
-        },
-        "id": "f494f79a-3f70-4f8c-9ae6-14ccdb884786",
-        "assertions": [
-          {
-            "assertion": "Status code is 200",
-            "skipped": false,
-            "error": {
-              "name": "AssertionError",
-              "index": 0,
-              "test": "Status code is 200",
-              "message": "expected false to be truthy",
-              "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:3)"
-            }
-          }
-        ]
-      },
-      {
-        "cursor": {
-          "ref": "dc08e00d-a0f3-4c84-84f3-84e301b60ba1",
-          "length": 5,
-          "cycles": 1,
-          "position": 3,
-          "iteration": 0,
-          "httpRequestId": "c59228ef-8a0c-499b-8f99-e5c4fc49386c"
-        },
-        "item": {
-          "id": "17bf1b88-9397-489e-bfa7-8ca8d7e42712",
-          "name": "04 - Get",
-          "request": {
-            "url": {
-              "port": "{{hostport}}",
-              "path": [
-                "get"
-              ],
-              "host": [
-                "{{hostname}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET"
-          },
-          "response": [],
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "71f10765-d6f7-4915-8428-f4bf4fc4ada4",
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ],
-                "_lastExecutionId": "915138d4-69ca-4e51-9acb-44e2eb25a3ab"
-              }
-            }
-          ]
-        },
-        "request": {
-          "url": {
-            "protocol": "http",
-            "port": "8000",
-            "path": [
-              "get"
-            ],
-            "host": [
-              "web"
-            ],
-            "query": [],
-            "variable": []
-          },
-          "header": [
-            {
-              "key": "Content-Type",
-              "value": "application/json"
-            },
-            {
-              "key": "User-Agent",
-              "value": "PostmanRuntime/7.33.0",
-              "system": true
-            },
-            {
-              "key": "Accept",
-              "value": "*/*",
-              "system": true
-            },
-            {
-              "key": "Cache-Control",
-              "value": "no-cache",
-              "system": true
-            },
-            {
-              "key": "Postman-Token",
-              "value": "ddfaa64f-429a-4d6e-9444-269729b4ee90",
-              "system": true
-            },
-            {
-              "key": "Host",
-              "value": "web:8000",
-              "system": true
-            },
-            {
-              "key": "Accept-Encoding",
-              "value": "gzip, deflate, br",
-              "system": true
-            },
-            {
-              "key": "Connection",
-              "value": "keep-alive",
-              "system": true
-            }
-          ],
-          "method": "GET"
-        },
-        "response": {
-          "id": "1ce131e1-ce66-4fc7-b3f2-c496b0fee160",
-          "status": "OK",
-          "code": 200,
-          "header": [
-            {
-              "key": "Server",
-              "value": "BaseHTTP/0.6 Python/3.6.1"
-            },
-            {
-              "key": "Date",
-              "value": "Wed, 06 Dec 2023 11:47:18 GMT"
-            },
-            {
-              "key": "Content-type",
-              "value": "text/plain"
-            }
-          ],
-          "stream": {
-            "type": "Buffer",
-            "data": [
-              72,
-              101,
-              108,
-              108,
-              111,
-              44,
-              32,
-              87,
-              111,
-              114,
-              108,
-              100,
-              33
-            ]
-          },
-          "cookie": [],
           "responseTime": 6,
-          "responseSize": 13
+          "responseSize": 447
         },
-        "id": "17bf1b88-9397-489e-bfa7-8ca8d7e42712",
-        "assertions": [
-          {
-            "assertion": "Status code is 200",
-            "skipped": false
-          }
-        ]
-      },
-      {
-        "cursor": {
-          "ref": "b1904a7f-8cd4-4daa-9fe4-5e39c11e3907",
-          "length": 5,
-          "cycles": 1,
-          "position": 4,
-          "iteration": 0,
-          "httpRequestId": "ee8fe42b-5968-41a3-964a-7026b613a8f6"
-        },
-        "item": {
-          "id": "a4731fb3-6739-4d86-891d-f990d38340d4",
-          "name": "05 - Fail",
-          "request": {
-            "url": {
-              "port": "{{hostport}}",
-              "path": [
-                "something"
-              ],
-              "host": [
-                "{{hostname}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "method": "GET"
-          },
-          "response": [],
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "bdcf5c0a-02f5-4492-9116-a6695ea460fc",
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 404\"] = responseCode.code === 404;"
-                ],
-                "_lastExecutionId": "3d30c013-7ab0-4d01-8a7e-3f8be29fcd74"
-              }
-            }
-          ]
-        },
-        "request": {
-          "url": {
-            "protocol": "http",
-            "port": "8000",
-            "path": [
-              "something"
-            ],
-            "host": [
-              "web"
-            ],
-            "query": [],
-            "variable": []
-          },
-          "header": [
-            {
-              "key": "User-Agent",
-              "value": "PostmanRuntime/7.33.0",
-              "system": true
-            },
-            {
-              "key": "Accept",
-              "value": "*/*",
-              "system": true
-            },
-            {
-              "key": "Cache-Control",
-              "value": "no-cache",
-              "system": true
-            },
-            {
-              "key": "Postman-Token",
-              "value": "ee779130-e239-40ec-944b-4941c748c278",
-              "system": true
-            },
-            {
-              "key": "Host",
-              "value": "web:8000",
-              "system": true
-            },
-            {
-              "key": "Accept-Encoding",
-              "value": "gzip, deflate, br",
-              "system": true
-            },
-            {
-              "key": "Connection",
-              "value": "keep-alive",
-              "system": true
-            }
-          ],
-          "method": "GET"
-        },
-        "response": {
-          "id": "e6c1a4e7-6da4-4571-b626-d3466e0cf012",
-          "status": "OK",
-          "code": 200,
-          "header": [
-            {
-              "key": "Server",
-              "value": "BaseHTTP/0.6 Python/3.6.1"
-            },
-            {
-              "key": "Date",
-              "value": "Wed, 06 Dec 2023 11:47:18 GMT"
-            },
-            {
-              "key": "Content-type",
-              "value": "text/plain"
-            }
-          ],
-          "stream": {
-            "type": "Buffer",
-            "data": [
-              72,
-              101,
-              108,
-              108,
-              111,
-              44,
-              32,
-              87,
-              111,
-              114,
-              108,
-              100,
-              33
-            ]
-          },
-          "cookie": [],
-          "responseTime": 7,
-          "responseSize": 13
-        },
-        "id": "a4731fb3-6739-4d86-891d-f990d38340d4",
+        "id": "b50b7d79-ad2e-4e41-90c2-1a914a025417",
         "assertions": [
           {
             "assertion": "Status code is 404",
-            "skipped": false,
-            "error": {
-              "name": "AssertionError",
-              "index": 0,
-              "test": "Status code is 404",
-              "message": "expected false to be truthy",
-              "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:5)"
-            }
+            "skipped": false
           }
         ]
       }
     ],
     "transfers": {
-      "responseTotal": 549
+      "responseTotal": 733
     },
-    "failures": [
-      {
-        "error": {
-          "name": "AssertionError",
-          "index": 0,
-          "test": "Status code is 200",
-          "message": "expected false to be truthy",
-          "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:3)",
-          "checksum": "b8ed5621ffc2dd1827f3fe54003d0779",
-          "id": "f767ef3b-8e46-4bb9-acec-f90468d6fcca",
-          "timestamp": 1701863238399,
-          "stacktrace": [
-            {
-              "fileName": "sandbox-script.js",
-              "lineNumber": 1,
-              "functionName": "Object.eval",
-              "typeName": "Object",
-              "methodName": "eval",
-              "columnNumber": 3,
-              "native": false
-            }
-          ]
-        },
-        "at": "assertion:0 in test-script",
-        "source": {
-          "id": "f494f79a-3f70-4f8c-9ae6-14ccdb884786",
-          "name": "03 - Add",
-          "request": {
-            "url": {
-              "port": "{{hostport}}",
-              "path": [
-                "add"
-              ],
-              "host": [
-                "{{hostname}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "method": "POST",
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"value\": 1\n}"
-            }
-          },
-          "response": [],
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "d887a2cf-5ab5-4fec-94f6-34d1b2bc99aa",
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ],
-                "_lastExecutionId": "3edb359f-18d9-45df-bfde-fa306d3455cb"
-              }
-            }
-          ]
-        },
-        "parent": {
-          "_": {
-            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
-          },
-          "item": [
-            {
-              "id": "505e7bb8-b1a3-463c-8c76-1823e38d9268",
-              "name": "01 - Health",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "health"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET"
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "4a3e5b48-0d23-44cc-84fd-8e94864f86a5",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ],
-                    "_lastExecutionId": "f2a20c81-d05a-475c-a5e3-8834d110b89a"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "d193c36f-68bf-49f1-a427-fc5ea1d2a407",
-              "name": "02 - Get",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "get"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET"
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "8bb6aaca-dc26-4e86-9958-ae8b584dca3f",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ],
-                    "_lastExecutionId": "96d3efaf-1d14-4538-afb6-3a2a92883bbc"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "f494f79a-3f70-4f8c-9ae6-14ccdb884786",
-              "name": "03 - Add",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "add"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"value\": 1\n}"
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "d887a2cf-5ab5-4fec-94f6-34d1b2bc99aa",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ],
-                    "_lastExecutionId": "3edb359f-18d9-45df-bfde-fa306d3455cb"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "17bf1b88-9397-489e-bfa7-8ca8d7e42712",
-              "name": "04 - Get",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "get"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET"
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "71f10765-d6f7-4915-8428-f4bf4fc4ada4",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ],
-                    "_lastExecutionId": "915138d4-69ca-4e51-9acb-44e2eb25a3ab"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "a4731fb3-6739-4d86-891d-f990d38340d4",
-              "name": "05 - Fail",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "something"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "method": "GET"
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "bdcf5c0a-02f5-4492-9116-a6695ea460fc",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
-                    ],
-                    "_lastExecutionId": "3d30c013-7ab0-4d01-8a7e-3f8be29fcd74"
-                  }
-                }
-              ]
-            }
-          ],
-          "event": [],
-          "variable": [],
-          "info": {
-            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
-            "name": "iterator-test-nrg",
-            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-          }
-        },
-        "cursor": {
-          "ref": "14f17df1-4156-47bb-9013-57ac66dc6d67",
-          "length": 5,
-          "cycles": 1,
-          "position": 2,
-          "iteration": 0,
-          "httpRequestId": "d7fc7140-8d81-4c2c-ad19-07e332d75238",
-          "scriptId": "d887a2cf-5ab5-4fec-94f6-34d1b2bc99aa",
-          "execution": "3edb359f-18d9-45df-bfde-fa306d3455cb"
-        }
-      },
-      {
-        "error": {
-          "name": "AssertionError",
-          "index": 0,
-          "test": "Status code is 404",
-          "message": "expected false to be truthy",
-          "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:5)",
-          "checksum": "8a8bfc0a1f05d016a8885b48fb4ca73f",
-          "id": "bed07c98-189e-4aef-8b34-049377361ba0",
-          "timestamp": 1701863238460,
-          "stacktrace": [
-            {
-              "fileName": "sandbox-script.js",
-              "lineNumber": 1,
-              "functionName": "Object.eval",
-              "typeName": "Object",
-              "methodName": "eval",
-              "columnNumber": 5,
-              "native": false
-            }
-          ]
-        },
-        "at": "assertion:0 in test-script",
-        "source": {
-          "id": "a4731fb3-6739-4d86-891d-f990d38340d4",
-          "name": "05 - Fail",
-          "request": {
-            "url": {
-              "port": "{{hostport}}",
-              "path": [
-                "something"
-              ],
-              "host": [
-                "{{hostname}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "method": "GET"
-          },
-          "response": [],
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "bdcf5c0a-02f5-4492-9116-a6695ea460fc",
-                "type": "text/javascript",
-                "exec": [
-                  "tests[\"Status code is 404\"] = responseCode.code === 404;"
-                ],
-                "_lastExecutionId": "3d30c013-7ab0-4d01-8a7e-3f8be29fcd74"
-              }
-            }
-          ]
-        },
-        "parent": {
-          "_": {
-            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
-          },
-          "item": [
-            {
-              "id": "505e7bb8-b1a3-463c-8c76-1823e38d9268",
-              "name": "01 - Health",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "health"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET"
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "4a3e5b48-0d23-44cc-84fd-8e94864f86a5",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ],
-                    "_lastExecutionId": "f2a20c81-d05a-475c-a5e3-8834d110b89a"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "d193c36f-68bf-49f1-a427-fc5ea1d2a407",
-              "name": "02 - Get",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "get"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET"
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "8bb6aaca-dc26-4e86-9958-ae8b584dca3f",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ],
-                    "_lastExecutionId": "96d3efaf-1d14-4538-afb6-3a2a92883bbc"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "f494f79a-3f70-4f8c-9ae6-14ccdb884786",
-              "name": "03 - Add",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "add"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "POST",
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\n    \"value\": 1\n}"
-                }
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "d887a2cf-5ab5-4fec-94f6-34d1b2bc99aa",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ],
-                    "_lastExecutionId": "3edb359f-18d9-45df-bfde-fa306d3455cb"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "17bf1b88-9397-489e-bfa7-8ca8d7e42712",
-              "name": "04 - Get",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "get"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET"
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "71f10765-d6f7-4915-8428-f4bf4fc4ada4",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                    ],
-                    "_lastExecutionId": "915138d4-69ca-4e51-9acb-44e2eb25a3ab"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "a4731fb3-6739-4d86-891d-f990d38340d4",
-              "name": "05 - Fail",
-              "request": {
-                "url": {
-                  "port": "{{hostport}}",
-                  "path": [
-                    "something"
-                  ],
-                  "host": [
-                    "{{hostname}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "method": "GET"
-              },
-              "response": [],
-              "event": [
-                {
-                  "listen": "test",
-                  "script": {
-                    "id": "bdcf5c0a-02f5-4492-9116-a6695ea460fc",
-                    "type": "text/javascript",
-                    "exec": [
-                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
-                    ],
-                    "_lastExecutionId": "3d30c013-7ab0-4d01-8a7e-3f8be29fcd74"
-                  }
-                }
-              ]
-            }
-          ],
-          "event": [],
-          "variable": [],
-          "info": {
-            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
-            "name": "iterator-test-nrg",
-            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-          }
-        },
-        "cursor": {
-          "ref": "b1904a7f-8cd4-4daa-9fe4-5e39c11e3907",
-          "length": 5,
-          "cycles": 1,
-          "position": 4,
-          "iteration": 0,
-          "httpRequestId": "ee8fe42b-5968-41a3-964a-7026b613a8f6",
-          "scriptId": "bdcf5c0a-02f5-4492-9116-a6695ea460fc",
-          "execution": "3d30c013-7ab0-4d01-8a7e-3f8be29fcd74"
-        }
-      }
-    ],
+    "failures": [],
     "error": null
   }
 }
