@@ -4,4 +4,5 @@ services:
     image: postman/newman:alpine
   nginx:
     name: nginx-{{common.env.name}}
+    image: nginx:stable-alpine3.17-perl
     port: 80

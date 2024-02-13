@@ -1,0 +1,3668 @@
+{
+  "collection": {
+    "_": {
+      "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+    },
+    "item": [
+      {
+        "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+        "name": "01 - Health",
+        "request": {
+          "url": {
+            "port": "{{hostport}}",
+            "path": [
+              "health"
+            ],
+            "host": [
+              "{{hostname}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+              "type": "text/javascript",
+              "exec": [
+                "tests[\"Status code is 200\"] = responseCode.code === 200;"
+              ],
+              "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+            }
+          }
+        ]
+      },
+      {
+        "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+        "name": "02 - Get",
+        "request": {
+          "url": {
+            "port": "{{hostport}}",
+            "path": [
+              "get"
+            ],
+            "host": [
+              "{{hostname}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+              "type": "text/javascript",
+              "exec": [
+                "tests[\"Status code is 200\"] = responseCode.code === 200;"
+              ],
+              "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+            }
+          }
+        ]
+      },
+      {
+        "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+        "name": "03 - Add",
+        "request": {
+          "url": {
+            "port": "{{hostport}}",
+            "path": [
+              "add"
+            ],
+            "host": [
+              "{{hostname}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"value\": 1\n}"
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+              "type": "text/javascript",
+              "exec": [
+                "tests[\"Status code is 200\"] = responseCode.code === 200;"
+              ],
+              "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+        "name": "04 - Get",
+        "request": {
+          "url": {
+            "port": "{{hostport}}",
+            "path": [
+              "get"
+            ],
+            "host": [
+              "{{hostname}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+              "type": "text/javascript",
+              "exec": [
+                "tests[\"Status code is 200\"] = responseCode.code === 200;"
+              ],
+              "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+        "name": "05 - Fail",
+        "request": {
+          "url": {
+            "port": "{{hostport}}",
+            "path": [
+              "something"
+            ],
+            "host": [
+              "{{hostname}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+              "type": "text/javascript",
+              "exec": [
+                "tests[\"Status code is 404\"] = responseCode.code === 404;"
+              ],
+              "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+            }
+          }
+        ]
+      }
+    ],
+    "event": [],
+    "variable": [],
+    "info": {
+      "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+      "name": "iterator-test-nrg",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    }
+  },
+  "environment": {
+    "_": {
+      "postman_variable_scope": "environment",
+      "postman_exported_at": "2023-10-07T14:23:44.293Z",
+      "postman_exported_using": "Postman/10.15.0"
+    },
+    "id": "0c7a5773-a976-497e-adb3-e54050e812a2",
+    "name": "INT",
+    "values": [
+      {
+        "type": "any",
+        "value": "nginx-dev",
+        "key": "hostname"
+      },
+      {
+        "type": "any",
+        "value": "80",
+        "key": "hostport"
+      }
+    ]
+  },
+  "globals": {
+    "id": "461c58bc-fdca-4845-8fe4-c884f9553c86",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 5,
+        "pending": 0,
+        "failed": 5
+      },
+      "tests": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 5,
+        "pending": 0,
+        "failed": 5
+      },
+      "testScripts": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 0,
+      "responseMin": 0,
+      "responseMax": 0,
+      "responseSd": 0,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1707824221106,
+      "completed": 1707824246468
+    },
+    "executions": [
+      {
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 5,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "21357b15-0223-4d7b-b63c-e6cfac354e84",
+          "httpRequestId": "dfb30d47-d048-4a40-9a52-542943a548a4"
+        },
+        "item": {
+          "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+          "name": "01 - Health",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "health"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+              }
+            }
+          ]
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "80",
+            "path": [
+              "health"
+            ],
+            "host": [
+              "nginx-dev"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.36.3",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "f4ac98cd-d2a6-4457-8254-ad54fdfc7316",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "nginx-dev:80",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+        "requestError": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev"
+        },
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false,
+            "error": {
+              "name": "AssertionError",
+              "index": 0,
+              "test": "Status code is 200",
+              "message": "expected false to be truthy",
+              "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:1)"
+            }
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "26b156a4-5475-466a-b5f9-aa2a4a607e05",
+          "length": 5,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "745a8cbb-3e5e-433f-8df3-ce5419d09593"
+        },
+        "item": {
+          "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+          "name": "02 - Get",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "get"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+              }
+            }
+          ]
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "80",
+            "path": [
+              "get"
+            ],
+            "host": [
+              "nginx-dev"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.36.3",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "cd26660c-e17f-40b4-b61f-3052cce91758",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "nginx-dev:80",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+        "requestError": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev"
+        },
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false,
+            "error": {
+              "name": "AssertionError",
+              "index": 0,
+              "test": "Status code is 200",
+              "message": "expected false to be truthy",
+              "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:2)"
+            }
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "245f9f81-bd90-46dc-955c-b9cf5a52637f",
+          "length": 5,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "5ddb497b-900e-46cb-ad60-c2917678a3a5"
+        },
+        "item": {
+          "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+          "name": "03 - Add",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "add"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"value\": 1\n}"
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+              }
+            }
+          ]
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "80",
+            "path": [
+              "add"
+            ],
+            "host": [
+              "nginx-dev"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.36.3",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "fc3e6204-db6f-4203-982e-d47c117fbc86",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "nginx-dev:80",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n    \"value\": 1\n}"
+          }
+        },
+        "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+        "requestError": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev"
+        },
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false,
+            "error": {
+              "name": "AssertionError",
+              "index": 0,
+              "test": "Status code is 200",
+              "message": "expected false to be truthy",
+              "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:3)"
+            }
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "d170ea44-ee10-490f-ab5a-94fe0409325b",
+          "length": 5,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "a7fe7c8a-9d1a-455d-bffe-cc4faa8cb7f2"
+        },
+        "item": {
+          "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+          "name": "04 - Get",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "get"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+              }
+            }
+          ]
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "80",
+            "path": [
+              "get"
+            ],
+            "host": [
+              "nginx-dev"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.36.3",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "7a4e223a-8b60-4a2d-81d7-f2a7a55f2059",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "nginx-dev:80",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+        "requestError": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev"
+        },
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false,
+            "error": {
+              "name": "AssertionError",
+              "index": 0,
+              "test": "Status code is 200",
+              "message": "expected false to be truthy",
+              "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:4)"
+            }
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "b077ca53-0573-411c-ba28-be8929402404",
+          "length": 5,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "448ed438-9df3-4617-8590-13fbb0bf105e"
+        },
+        "item": {
+          "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+          "name": "05 - Fail",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "something"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                ],
+                "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+              }
+            }
+          ]
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "80",
+            "path": [
+              "something"
+            ],
+            "host": [
+              "nginx-dev"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.36.3",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "838fa508-59ac-4ad0-8767-e5a46c87569b",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "nginx-dev:80",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+        "requestError": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev"
+        },
+        "assertions": [
+          {
+            "assertion": "Status code is 404",
+            "skipped": false,
+            "error": {
+              "name": "AssertionError",
+              "index": 0,
+              "test": "Status code is 404",
+              "message": "expected false to be truthy",
+              "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:5)"
+            }
+          }
+        ]
+      }
+    ],
+    "transfers": {
+      "responseTotal": 0
+    },
+    "failures": [
+      {
+        "error": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev",
+          "name": "Error",
+          "message": "getaddrinfo EAI_AGAIN nginx-dev",
+          "stack": "Error: getaddrinfo EAI_AGAIN nginx-dev\n    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)",
+          "checksum": "bd557b2b858a3134fee64c0bf49dda8a",
+          "id": "2ddcb053-b5ec-4ede-95a7-75a1ee6ceb59",
+          "timestamp": 1707824226272,
+          "stacktrace": [
+            {
+              "fileName": "node:dns",
+              "lineNumber": 109,
+              "functionName": "GetAddrInfoReqWrap.onlookup [as oncomplete]",
+              "typeName": "GetAddrInfoReqWrap",
+              "methodName": "onlookup [as oncomplete]",
+              "columnNumber": 26,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+          "name": "01 - Health",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "health"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 5,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "21357b15-0223-4d7b-b63c-e6cfac354e84",
+          "httpRequestId": "dfb30d47-d048-4a40-9a52-542943a548a4"
+        }
+      },
+      {
+        "error": {
+          "name": "AssertionError",
+          "index": 0,
+          "test": "Status code is 200",
+          "message": "expected false to be truthy",
+          "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:1)",
+          "checksum": "819664946a21b16d41a3731a7935b190",
+          "id": "09ade6b6-3c8d-4e69-b1a3-c605a7d11757",
+          "timestamp": 1707824226297,
+          "stacktrace": [
+            {
+              "fileName": "sandbox-script.js",
+              "lineNumber": 1,
+              "functionName": "Object.eval",
+              "typeName": "Object",
+              "methodName": "eval",
+              "columnNumber": 1,
+              "native": false
+            }
+          ]
+        },
+        "at": "assertion:0 in test-script",
+        "source": {
+          "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+          "name": "01 - Health",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "health"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 5,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "21357b15-0223-4d7b-b63c-e6cfac354e84",
+          "httpRequestId": "dfb30d47-d048-4a40-9a52-542943a548a4",
+          "scriptId": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+          "execution": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+        }
+      },
+      {
+        "error": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev",
+          "name": "Error",
+          "message": "getaddrinfo EAI_AGAIN nginx-dev",
+          "stack": "Error: getaddrinfo EAI_AGAIN nginx-dev\n    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)",
+          "checksum": "bd557b2b858a3134fee64c0bf49dda8a",
+          "id": "0fb8d3a7-61f7-43b3-ae47-f45c7637c627",
+          "timestamp": 1707824231336,
+          "stacktrace": [
+            {
+              "fileName": "node:dns",
+              "lineNumber": 109,
+              "functionName": "GetAddrInfoReqWrap.onlookup [as oncomplete]",
+              "typeName": "GetAddrInfoReqWrap",
+              "methodName": "onlookup [as oncomplete]",
+              "columnNumber": 26,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+          "name": "02 - Get",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "get"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "ref": "26b156a4-5475-466a-b5f9-aa2a4a607e05",
+          "length": 5,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "745a8cbb-3e5e-433f-8df3-ce5419d09593"
+        }
+      },
+      {
+        "error": {
+          "name": "AssertionError",
+          "index": 0,
+          "test": "Status code is 200",
+          "message": "expected false to be truthy",
+          "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:2)",
+          "checksum": "2d920b9285362876a5925a809e92e317",
+          "id": "75a55fd2-1acb-4e5f-82db-97a35bd75034",
+          "timestamp": 1707824231347,
+          "stacktrace": [
+            {
+              "fileName": "sandbox-script.js",
+              "lineNumber": 1,
+              "functionName": "Object.eval",
+              "typeName": "Object",
+              "methodName": "eval",
+              "columnNumber": 2,
+              "native": false
+            }
+          ]
+        },
+        "at": "assertion:0 in test-script",
+        "source": {
+          "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+          "name": "02 - Get",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "get"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "ref": "26b156a4-5475-466a-b5f9-aa2a4a607e05",
+          "length": 5,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "745a8cbb-3e5e-433f-8df3-ce5419d09593",
+          "scriptId": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+          "execution": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+        }
+      },
+      {
+        "error": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev",
+          "name": "Error",
+          "message": "getaddrinfo EAI_AGAIN nginx-dev",
+          "stack": "Error: getaddrinfo EAI_AGAIN nginx-dev\n    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)",
+          "checksum": "bd557b2b858a3134fee64c0bf49dda8a",
+          "id": "248155df-f7f7-419c-af63-06e15ffd4b0f",
+          "timestamp": 1707824236375,
+          "stacktrace": [
+            {
+              "fileName": "node:dns",
+              "lineNumber": 109,
+              "functionName": "GetAddrInfoReqWrap.onlookup [as oncomplete]",
+              "typeName": "GetAddrInfoReqWrap",
+              "methodName": "onlookup [as oncomplete]",
+              "columnNumber": 26,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+          "name": "03 - Add",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "add"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"value\": 1\n}"
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "ref": "245f9f81-bd90-46dc-955c-b9cf5a52637f",
+          "length": 5,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "5ddb497b-900e-46cb-ad60-c2917678a3a5"
+        }
+      },
+      {
+        "error": {
+          "name": "AssertionError",
+          "index": 0,
+          "test": "Status code is 200",
+          "message": "expected false to be truthy",
+          "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:3)",
+          "checksum": "b8ed5621ffc2dd1827f3fe54003d0779",
+          "id": "9fc85087-a269-443f-a509-ba6e2e4d1919",
+          "timestamp": 1707824236387,
+          "stacktrace": [
+            {
+              "fileName": "sandbox-script.js",
+              "lineNumber": 1,
+              "functionName": "Object.eval",
+              "typeName": "Object",
+              "methodName": "eval",
+              "columnNumber": 3,
+              "native": false
+            }
+          ]
+        },
+        "at": "assertion:0 in test-script",
+        "source": {
+          "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+          "name": "03 - Add",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "add"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"value\": 1\n}"
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "ref": "245f9f81-bd90-46dc-955c-b9cf5a52637f",
+          "length": 5,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "5ddb497b-900e-46cb-ad60-c2917678a3a5",
+          "scriptId": "ed9c8199-540d-4838-98e8-cb10d480021b",
+          "execution": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+        }
+      },
+      {
+        "error": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev",
+          "name": "Error",
+          "message": "getaddrinfo EAI_AGAIN nginx-dev",
+          "stack": "Error: getaddrinfo EAI_AGAIN nginx-dev\n    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)",
+          "checksum": "bd557b2b858a3134fee64c0bf49dda8a",
+          "id": "e703985a-1ddc-46f4-8bd1-23d9c0ae9a8e",
+          "timestamp": 1707824241417,
+          "stacktrace": [
+            {
+              "fileName": "node:dns",
+              "lineNumber": 109,
+              "functionName": "GetAddrInfoReqWrap.onlookup [as oncomplete]",
+              "typeName": "GetAddrInfoReqWrap",
+              "methodName": "onlookup [as oncomplete]",
+              "columnNumber": 26,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+          "name": "04 - Get",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "get"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "ref": "d170ea44-ee10-490f-ab5a-94fe0409325b",
+          "length": 5,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "a7fe7c8a-9d1a-455d-bffe-cc4faa8cb7f2"
+        }
+      },
+      {
+        "error": {
+          "name": "AssertionError",
+          "index": 0,
+          "test": "Status code is 200",
+          "message": "expected false to be truthy",
+          "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:4)",
+          "checksum": "8294d54b4e094e13ef4e46a83e02e5c6",
+          "id": "c4da27cf-1b74-457a-9088-c372d7d929a1",
+          "timestamp": 1707824241426,
+          "stacktrace": [
+            {
+              "fileName": "sandbox-script.js",
+              "lineNumber": 1,
+              "functionName": "Object.eval",
+              "typeName": "Object",
+              "methodName": "eval",
+              "columnNumber": 4,
+              "native": false
+            }
+          ]
+        },
+        "at": "assertion:0 in test-script",
+        "source": {
+          "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+          "name": "04 - Get",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "get"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                ],
+                "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "ref": "d170ea44-ee10-490f-ab5a-94fe0409325b",
+          "length": 5,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "a7fe7c8a-9d1a-455d-bffe-cc4faa8cb7f2",
+          "scriptId": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+          "execution": "8c410004-a45a-4514-8236-5829e30fe73a"
+        }
+      },
+      {
+        "error": {
+          "errno": -3001,
+          "code": "EAI_AGAIN",
+          "syscall": "getaddrinfo",
+          "hostname": "nginx-dev",
+          "name": "Error",
+          "message": "getaddrinfo EAI_AGAIN nginx-dev",
+          "stack": "Error: getaddrinfo EAI_AGAIN nginx-dev\n    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)",
+          "checksum": "bd557b2b858a3134fee64c0bf49dda8a",
+          "id": "07bcd811-4f43-4cd8-963b-c0937c5d665d",
+          "timestamp": 1707824246451,
+          "stacktrace": [
+            {
+              "fileName": "node:dns",
+              "lineNumber": 109,
+              "functionName": "GetAddrInfoReqWrap.onlookup [as oncomplete]",
+              "typeName": "GetAddrInfoReqWrap",
+              "methodName": "onlookup [as oncomplete]",
+              "columnNumber": 26,
+              "native": false
+            }
+          ]
+        },
+        "at": "request",
+        "source": {
+          "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+          "name": "05 - Fail",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "something"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                ],
+                "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "ref": "b077ca53-0573-411c-ba28-be8929402404",
+          "length": 5,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "448ed438-9df3-4617-8590-13fbb0bf105e"
+        }
+      },
+      {
+        "error": {
+          "name": "AssertionError",
+          "index": 0,
+          "test": "Status code is 404",
+          "message": "expected false to be truthy",
+          "stack": "AssertionError: expected false to be truthy\n   at Object.eval sandbox-script.js:1:5)",
+          "checksum": "8a8bfc0a1f05d016a8885b48fb4ca73f",
+          "id": "edcfcf19-f146-4f13-9fbf-4c3411664a71",
+          "timestamp": 1707824246459,
+          "stacktrace": [
+            {
+              "fileName": "sandbox-script.js",
+              "lineNumber": 1,
+              "functionName": "Object.eval",
+              "typeName": "Object",
+              "methodName": "eval",
+              "columnNumber": 5,
+              "native": false
+            }
+          ]
+        },
+        "at": "assertion:0 in test-script",
+        "source": {
+          "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+          "name": "05 - Fail",
+          "request": {
+            "url": {
+              "port": "{{hostport}}",
+              "path": [
+                "something"
+              ],
+              "host": [
+                "{{hostname}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                "type": "text/javascript",
+                "exec": [
+                  "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                ],
+                "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+              }
+            }
+          ]
+        },
+        "parent": {
+          "_": {
+            "postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5"
+          },
+          "item": [
+            {
+              "id": "4e2f292e-6af7-4a33-93fe-dc22fb308ef3",
+              "name": "01 - Health",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "health"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e8e4a9d-4ebb-4532-89c1-4013068fc911",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "9de82c82-fa20-41cb-a41f-3aaf03d9d5c2"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "18a13fdb-901c-40d8-ada4-0bdbdfe68559",
+              "name": "02 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "185f45d2-aa7b-44cc-9d0a-1db78110d0ac",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "d97bdeb0-390c-46cb-9361-03dfa3ab912a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "fac02da0-ef50-4e75-b4b7-78857f7ac9e1",
+              "name": "03 - Add",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "add"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"value\": 1\n}"
+                }
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ed9c8199-540d-4838-98e8-cb10d480021b",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "dfd585ce-8ed4-4e6b-97ae-b4019690fad3"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ced745c9-3e6f-43a7-89eb-af3581d4efe0",
+              "name": "04 - Get",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "get"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ac9ef99d-3a83-46c1-9ae3-9fab78c8388f",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 200\"] = responseCode.code === 200;"
+                    ],
+                    "_lastExecutionId": "8c410004-a45a-4514-8236-5829e30fe73a"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ebffdce4-4696-441b-b505-fd259dac8181",
+              "name": "05 - Fail",
+              "request": {
+                "url": {
+                  "port": "{{hostport}}",
+                  "path": [
+                    "something"
+                  ],
+                  "host": [
+                    "{{hostname}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET"
+              },
+              "response": [],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+                    "type": "text/javascript",
+                    "exec": [
+                      "tests[\"Status code is 404\"] = responseCode.code === 404;"
+                    ],
+                    "_lastExecutionId": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+                  }
+                }
+              ]
+            }
+          ],
+          "event": [],
+          "variable": [],
+          "info": {
+            "_postman_id": "d712a8d9-dd2d-44a2-a911-6e3e0466a5b5",
+            "name": "iterator-test-nrg",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+          }
+        },
+        "cursor": {
+          "ref": "b077ca53-0573-411c-ba28-be8929402404",
+          "length": 5,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "448ed438-9df3-4617-8590-13fbb0bf105e",
+          "scriptId": "2a63ae7e-71a3-4a1d-b768-35c3851f1613",
+          "execution": "ea2a1798-5489-40e9-9fd4-ea1064932c20"
+        }
+      }
+    ],
+    "error": null
+  }
+}
