@@ -1,5 +1,20 @@
 - name: Building environment
   hosts: localhost
+  pre_tasks:
+    - name: Create compose directory
+      file:
+        path: "{{common.running_path}}"
+        state: directory
+        owner: root
+        group: root
+        mode: '1777'
+    - name: Create compose newman directory
+      file:
+        path: "{{common.running_path}}/newman"
+        state: directory
+        owner: root
+        group: root
+        mode: '1777'
   roles:
     - newman
     - app
