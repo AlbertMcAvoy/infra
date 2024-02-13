@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [1.2] - 2024-02-13
+
+### Added
+
+- Incorporation of Ansible
+    - Python's docker configuration generated
+    - Nginx's docker configuration generated
+
 ## [1.1] - 2024-02-13
 
 ### Added
