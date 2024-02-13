@@ -1,0 +1,4 @@
+- name: "Generating docker compose file for python service"
+  template:
+    src: "compose.yml.j2"
+    dest: "{{common.running_path}}/python/compose.yml"

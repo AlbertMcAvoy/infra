@@ -15,6 +15,14 @@
         owner: root
         group: root
         mode: '1777'
+    - name: Create compose python directory
+      file:
+        path: "{{common.running_path}}/python"
+        state: directory
+        owner: root
+        group: root
+        mode: '1777'
   roles:
     - newman
+    - python
     - app

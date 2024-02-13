@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    {{services.python.name}}:
+        build:
+            context: "./../../../python/"
+            dockerfile: "./../DOCKERFILE"
+            command: python app.py
+            environment:
+                DATABASE_URL: ${DATABASE_URL}
+            volumes:
+                - ./../../../python:/app
+            depends_on:
+                - mariadb
+            networks:
+                - {{common.env.network}}
