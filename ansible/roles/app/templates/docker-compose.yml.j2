@@ -1,0 +1,49 @@
+version: '3'
+networks:
+ {{common.env.network}}:
+   name: fastnetwork
+   driver: bridge
+   
+services:
+  web:
+    build:
+      context: python
+      dockerfile: ./DOCKERFILE
+    volumes:
+      - ./python:/app
+    command: python app.py
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    networks:
+      - {{common.env.network}}
+    depends_on:
+      - mariadb
+  {{services.newman.name}}:
+      extends:
+        file: ./newman/compose.yml
+        service: {{services.newman.name}}
+  nginx:
+    build:
+      context: nginx
+      dockerfile: DOCKERFILE
+    ports:
+      - "80:80"
+    networks:
+      - {{common.env.network}}
+    depends_on:
+      - web
+  mariadb:
+    image: mysql:5.7
+    command: --init-file /data/application/init.sql
+    volumes:
+        - ./mysql/1-SCHEMA.sql:/data/application/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${PASSWORD_ROOT}
+      MYSQL_DATABASE: ${DATABASE_NAME}
+    networks:
+      - {{common.env.network}}
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=${PASSWORD_ROOT} --execute \"SHOW DATABASES;\""
+      interval: 3s
+      timeout: 1s
+      retries: 5

@@ -1,2 +1,7 @@
-content:
-  to_print: "useless data"
+services:
+  newman: 
+    name: newman-{{common.env.name}}
+    image: postman/newman:alpine
+  nginx:
+    name: nginx-{{common.env.name}}
+    port: 80

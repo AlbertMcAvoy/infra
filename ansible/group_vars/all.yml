@@ -1,0 +1,11 @@
+common:
+  running_path: compose
+  env:
+    name: dev
+    network: app_network
+    password_root: passwd
+    database_name: iterator-db
+  compose:
+    - newman
+    - nginx
+    - python

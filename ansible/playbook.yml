@@ -1,4 +1,5 @@
-- name: Utiliser le rôle pour afficher une variable
+- name: Building environment
   hosts: localhost
   roles:
-    - my_role
+    - newman
+    - app
