@@ -4,15 +4,15 @@ services:
     {{services.newman.name}}:
         image: {{services.newman.image}}
         command:
-        run collections/iterator-test-nrg.json -k
-        -e int.postman_environnement.json
-        -r cli,json
-        --reporter-json-export="collections/iterator-test.ng"
+            run collections/iterator-test-nrg.json -k
+            -e int.postman_environnement.json
+            -r cli,json
+            --reporter-json-export="collections/iterator-test.ng"
         volumes:
-        - ../../../newman/collections:/etc/newman/collections
-        - ./int.postman_environnement.json:/etc/newman/int.postman_environnement.json
+            - ../../../newman/collections:/etc/newman/collections
+            - ./int.postman_environnement.json:/etc/newman/int.postman_environnement.json
         depends_on:
-        - web
-        - mariadb
+            - web
+            - mariadb
         networks:
-        - {{common.env.network}}
+            - {{common.env.network}}

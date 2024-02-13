@@ -7,10 +7,10 @@ networks:
 services:
   web:
     build:
-      context: python
+      context: ../../python
       dockerfile: ./DOCKERFILE
     volumes:
-      - ./python:/app
+      - ../../python:/app
     command: python app.py
     environment:
       DATABASE_URL: ${DATABASE_URL}
@@ -24,7 +24,7 @@ services:
         service: newman-dev
   nginx:
     build:
-      context: nginx
+      context: ../../nginx
       dockerfile: DOCKERFILE
     ports:
       - "80:80"
@@ -36,7 +36,7 @@ services:
     image: mysql:5.7
     command: --init-file /data/application/init.sql
     volumes:
-        - ./mysql/1-SCHEMA.sql:/data/application/init.sql
+        - ../../mysql/1-SCHEMA.sql:/data/application/init.sql
     environment:
       MYSQL_ROOT_PASSWORD: ${PASSWORD_ROOT}
       MYSQL_DATABASE: ${DATABASE_NAME}
