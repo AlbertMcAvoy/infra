@@ -12,7 +12,7 @@ services:
             - ../../../newman/collections:/etc/newman/collections
             - ./int.postman_environnement.json:/etc/newman/int.postman_environnement.json
         depends_on:
-            - web
+            - {{services.python.name}}
             - mariadb
         networks:
             - {{common.env.network}}

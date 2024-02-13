@@ -10,4 +10,4 @@ services:
         networks:
             - {{common.env.network}}
         depends_on:
-            - web
+            - {{services.python.name}}
