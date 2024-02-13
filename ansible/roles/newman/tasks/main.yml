@@ -1,0 +1,9 @@
+- name: "Generating docker compose file for newman service"
+  template:
+    src: "compose.yml.j2"
+    dest: "{{common.running_path}}/newman/compose.yml"
+
+- name: "Generating newman configuration for collection"
+  template:
+    src: "int.postman_environnement.json.j2"
+    dest: "{{common.running_path}}/newman/int.postman_environnement.json"

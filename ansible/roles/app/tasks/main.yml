@@ -1,0 +1,9 @@
+- name: "Generating docker compose file for application"
+  template:
+    src: "docker-compose.yml.j2"
+    dest: "{{common.running_path}}/docker-compose.yml"
+
+- name: "Generating docker env file for application"
+  template:
+    src: ".env.j2"
+    dest: "{{common.running_path}}/.env"
