@@ -1,9 +1,0 @@
-services:
-  newman: 
-    name: newman-{{common.env.name}}
-    image: postman/newman:alpine
-  nginx:
-    name: nginx-{{common.env.name}}
-    port: 80
-  python:
-    name: web

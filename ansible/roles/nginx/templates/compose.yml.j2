@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    {{services.nginx.name}}:
+        image: {{services.nginx.image}}
+        volumes:
+            - ./nginx.conf:/etc/nginx/nginx.conf
+        ports:
+            - "80:{{services.nginx.port}}"
+        networks:
+            - {{common.env.network}}
+        depends_on:
+            - web
