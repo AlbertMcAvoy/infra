@@ -5,23 +5,14 @@ networks:
    driver: bridge
    
 services:
-  web:
-    build:
-      context: ../../python
-      dockerfile: ./DOCKERFILE
-    volumes:
-      - ../../python:/app
-    command: python app.py
-    environment:
-      DATABASE_URL: ${DATABASE_URL}
-    networks:
-      - {{common.env.network}}
-    depends_on:
-      - mariadb
+  {{services.python.name}}:
+    extends:
+      file: ./python/compose.yml
+      service: {{services.python.name}}
   {{services.newman.name}}:
-      extends:
-        file: ./newman/compose.yml
-        service: {{services.newman.name}}
+    extends:
+      file: ./newman/compose.yml
+      service: {{services.newman.name}}
   nginx:
     build:
       context: ../../nginx

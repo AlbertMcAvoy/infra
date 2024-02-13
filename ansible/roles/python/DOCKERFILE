@@ -1,9 +1,0 @@
-FROM python:3.7-alpine
-
-WORKDIR /app
-
-COPY . .
-
-RUN pip install mysql-connector-python
-
-EXPOSE 8000
