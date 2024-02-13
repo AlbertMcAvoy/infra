@@ -15,6 +15,13 @@
         owner: root
         group: root
         mode: '1777'
+    - name: Create compose python directory
+      file:
+        path: "{{common.running_path}}/python"
+        state: directory
+        owner: root
+        group: root
+        mode: '1777'
     - name: Create compose nginx directory
       file:
         path: "{{common.running_path}}/nginx"
@@ -25,4 +32,6 @@
   roles:
     - nginx
     - newman
+    - nginx
+    - python
     - app

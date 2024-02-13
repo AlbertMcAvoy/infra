@@ -6,3 +6,5 @@ services:
     name: nginx-{{common.env.name}}
     image: nginx:stable-alpine3.17-perl
     port: 80
+  python:
+    name: web-{{common.env.name}}
